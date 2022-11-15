@@ -85,7 +85,6 @@ class Hearts:
 
 # プレイヤークラス
 class Bird:
-
     def __init__(self, file_name, x, xy):  # "mt/fig/6.png"
         self.sfc = pg.image.load(file_name)
         self.sfc = pg.transform.rotozoom(self.sfc, 0, x)
