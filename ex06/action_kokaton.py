@@ -168,10 +168,9 @@ class Books:
             self.books.pop(0)
             num_of_books += 1
 
-class Txt: #金子(C0B21047)作
-    """
-    テキスト表示用クラス
-    """
+
+#金子(C0B21047)作 テキスト表示用クラス
+class Txt: 
     def __init__(self,font,color,xy,text):
         """
         font：フォント\n
@@ -187,10 +186,8 @@ class Txt: #金子(C0B21047)作
         scr.blit(self.text, self.rct)
 
 
-def start_scr(scr): #金子作
-    """
-    最初の画面
-    """
+#金子作 最初の画面の関数
+def start_scr(scr): 
     start_title = Txt(pg.font.Font(None,160), "RED", (800, 300), "Action Kokaton")
     start_txt = Txt(pg.font.Font(None,100), "BLACK", (800, 500), "Push any key to start")
     clock = pg.time.Clock()
@@ -236,10 +233,11 @@ def main():
     scr = Screen('アクションこうかとん', (1600, 900))
     tori = Bird("mt/fig/3_reverse.png", 2.5, (180, 500))
     books = Books()
-    score = Score()
     hearts = Hearts()
     
     start_scr(scr)
+    score = Score()
+    
     clock = pg.time.Clock()
 
     # メインループ
@@ -267,3 +265,4 @@ if __name__ == "__main__":
     main()
     pg.quit()
     sys.exit()
+    
